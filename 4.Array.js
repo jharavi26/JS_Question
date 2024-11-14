@@ -1,10 +1,10 @@
-// Array :- an Array can store multiple values. Each value in an array has an index, and each index has a reference in a memory address. 
+// // Array :- an Array can store multiple values. Each value in an array has an index, and each index has a reference in a memory address. 
 
-// Create a Array 
+// // Create a Array 
 const ars = new Array();
 console.log(ars);
 
-// using Bracket 
+// // using Bracket 
 
 const arrr = []
 console.log(arrr);
@@ -74,3 +74,15 @@ console.log(array)
 
 array.sort((a, b) => a - b);              // Sorting numbers requires a compare function,
 console.log(array);
+
+
+const arr = new Array(1,2,3,4,5);
+console.log(arr);
+console.log(arr[0]);
+console.log(arr[arr.length-1]);
+
+const company = ['google', 'facebook', 'amazon', 'flipkart', 'netflix', 'zomato']
+for(let i=0; i<company.length; i++)
+{
+    console.log(company[i].toUpperCase());
+}
