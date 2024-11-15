@@ -82,3 +82,26 @@ let sum = (arr)=>{
   
 }
 sum([2,3,4,5,6,7,8]);
+
+function evensAndOdds(num) {
+  let evens = 0;
+  let odds = 0;
+  
+  // Loop from 1 to the given number (inclusive)
+  for (let i = 0; i <= num; i++) {
+      if (i % 2 === 0) {
+          evens++; // If the number is even
+      } else {
+          odds++; // If the number is odd
+      }
+  }
+  
+  console.log(`The number of evens are ${evens}.`);
+  console.log(`The number of odds are ${odds}.`);
+}
+
+// Example usage:
+evensAndOdds(100);
+// Output:
+// The number of evens are 50.
+// The number of odds are 50.
