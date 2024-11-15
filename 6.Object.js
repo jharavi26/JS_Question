@@ -46,5 +46,5 @@ const dog ={
   }
 };
 console.log(dog);
-const values = Object.values(dog);
-console.log(values);
+const value = Object.values(dog);
+console.log(value);
