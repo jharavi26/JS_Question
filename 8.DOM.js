@@ -23,7 +23,7 @@ titles[3].setAttribute('id', 'fourth-title')
 
 The textContent property is used to add text to an HTML element.
 const titles = document.querySelectorAll('h1')
-titles[3].textContent = 'Fourth Title'
+titles.textContent = 'Fourth Title'
 
 The innerHTML property sets or gets the HTML content of an element, including its descendants.
 
@@ -32,6 +32,9 @@ Styling Element :-document.getElementById("title").style.color = "blue";
 
 // result = document.getElementsByTagName('p');
 // console.log(result);
+
+// const anuj = document.getElementsByClassName('paragraph');
+// console.log(anuj);
 
 // Selecting dom element using query selector method
 const Element = document.querySelectorAll("p");
@@ -56,3 +59,30 @@ let res =document.querySelector('#third-para');
 console.log(res);
 let ravi = res.textContent = 'Fourth Paragraph' 
 console.log(ravi);
+
+const titles = document.querySelector('h1')     // Adding attribute 
+titles.setAttribute('class', 'title')
+titles.setAttribute('id', 'fourth-title')
+
+console.log(titles);
+
+//The setAttribute() method set any html attribute.
+// It takes two parameters the type of the attribute and the name of the attribute. 
+
+const hand = document.querySelector('h2');
+hand.setAttribute('class', 'Header' );
+hand.setAttribute('id','Fifth_Element');
+console.log(hand);
+
+const colour = document.querySelectorAll("p");
+colour.forEach((para, i) => {
+  if (i%2==0){
+    para.style.backgroundColor = "red"
+  }
+  else {
+    para.style.backgroundColor ="Blue"
+  }
+})
+
+
+
