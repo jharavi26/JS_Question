@@ -6,6 +6,16 @@ result.textContent = "Dom-Manipulation";
 document.body.appendChild(result);              //Appending child to a parent element
 console.log(result);
 
+// Accessing a Element 
+// Traverse DOM:
+
+// 1.element.parentNode
+// 2.element.childNodes
+// 3.element.firstChild
+// 4.element.lastChild
+// 5.element.nextSibling
+// 6.element.previousSibling
+
 let title
         for (let i = 0; i < 3; i++) {
             title = document.createElement('p')
@@ -40,4 +50,16 @@ function isPrime(num) {
           return true;
         }
 
+        const current = document.querySelector('.current');
+
+        // Parent Node
+        console.log(current.parentNode); // Logs the <div class="parent">
+        
+        // Child Nodes
+        const parent = document.querySelector('.parent');
+        console.log(parent.children); // Logs all <p> elements
+        console.log(parent.firstElementChild); // Logs the first <p> element
+        console.log(parent.lastElementChild);  // Logs the last <p> element
+        
+    
 
