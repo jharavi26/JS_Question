@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center elements horizontally */
+    justify-content: flex-start; /* Align elements to the top */
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%; /* Adjust as needed */
+    margin: 10px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.number-generator {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px; /* Space between numbers */
+    justify-content: center; /* Center the number grid */
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap : 5px;
+}
+
+.grid div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  
+  .green {
+    background-color: #21bf73;
+    color: #fff;
+  }
+  
+  .yellow {
+    background-color: #f7df1e;
+    color: #000;
+  }
+  
+  .red {
+    background-color: #fd5e53;
+    color: #fff;
+  }
