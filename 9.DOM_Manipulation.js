@@ -25,30 +25,6 @@ let title
             console.log(title)
         }
 
-const grid = document.querySelector('.grid');
-
-        for (let i = 0; i <= 101; i++) {
-          const div = document.createElement('div');
-          div.textContent = i;
-        
-          if (isPrime(i)) {
-            div.className = 'red'; // Prime numbers
-          } else if (i % 2 === 0) {
-            div.className = 'green'; // Even numbers
-          } else {
-            div.className = 'yellow'; // Odd numbers
-          }
-        
-          grid.appendChild(div);
-        }
-        
-function isPrime(num) {
-          if (num < 2) return false;
-          for (let i = 2; i <= Math.sqrt(num); i++) {
-            if (num % i === 0) return false;
-          }
-          return true;
-        }
 
         const current = document.querySelector('.current');
 

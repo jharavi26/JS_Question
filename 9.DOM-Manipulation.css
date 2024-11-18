@@ -1,55 +1,74 @@
+/* General body and text styling */
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center elements horizontally */
-    justify-content: flex-start; /* Align elements to the top */
-    background-color: black;
-    color: white;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  padding: 20px;
 }
 
+/* Input Section */
+#inputSection {
+  margin-bottom: 20px;
+}
+
+#numberInput {
+  padding: 5px;
+  margin-right: 10px;
+  width: 100px;
+}
+
+/* Grid and container styles */
 .container {
-    width: 80%; /* Adjust as needed */
-    margin: 10px 0;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
 }
 
-.number-generator {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px; /* Space between numbers */
-    justify-content: center; /* Center the number grid */
+.number {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  color: white;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap : 5px;
+/* Number classifications */
+.even {
+  background-color: #4caf50; /* Green */
 }
 
-.grid div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 5px;
-  }
-  
-  .green {
-    background-color: #21bf73;
-    color: #fff;
-  }
-  
-  .yellow {
-    background-color: #f7df1e;
-    color: #000;
-  }
-  
-  .red {
-    background-color: #fd5e53;
-    color: #fff;
-  }
+.odd {
+  background-color: #2196f3; /* Blue */
+}
+
+.prime {
+  background-color: #ff5722; /* Orange */
+}
+
+/* Styling for paragraph and parent container */
+.parent {
+  margin-top: 20px;
+}
+
+.child {
+  margin: 5px;
+}
+
+.first {
+  color: red;
+}
+
+.current {
+  color: green;
+}
+
+.last {
+  color: blue;
+}
+
+.last {
+  font-weight: bold;
+}
