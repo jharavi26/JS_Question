@@ -1,5 +1,9 @@
-//Callback
-//Promise :- It's an object that represents a future result of an operation.
+//Callback Hell :-  Nested Callback stacked below one another forming a pyramid structure, Inversion of Control
+//Promise :- The Promise object represents the eventual completion (or failure) of an asynchronous operation.
+
+//Syntax Of Promise :-
+// let promise = new Promise((resolve, reject) => {
+// code... )}
 
 /* A promise has three states:
 1. Pending: The initial state when the operation is ongoing and not yet complete.
@@ -76,3 +80,4 @@ const pizzaOrder = new Promise((resolve, reject) => {
       console.log(error); // If rejected, this runs
     });
   
+

@@ -1,10 +1,10 @@
-// // // HOF :- Higher order functions are functions which take other function as a parameter or return a function as a value. 
-// // // Callback Function :-The function passed as a parameter to other function is called callback.
+// // HOF :- Higher order functions are functions which take other function as a parameter or return a function as a value. 
+// Callback Function :-The function passed as a parameter to other function is called callback.
 
-// // //setInterval higher order function to do some activity continuously with in some interval of time.
-// // //we use setTimeout higher order function to execute some action at some time in the future.
+//setInterval higher order function to do some activity continuously with in some interval of time.
+ //we use setTimeout higher order function to execute some action at some time in the future.
 
-// // //Callback 
+//Callback 
 
 function square(n){
     return n**2;
