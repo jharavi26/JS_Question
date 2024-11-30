@@ -74,5 +74,44 @@ task1(() => {
 });
 
 
+function boilWater() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log("Water boiled");
+      resolve();
+    }, 1000);
+  });
+}
+
+function makeTea() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log("Tea made");
+      resolve();
+    }, 1000);
+  });
+}
+
+function serveTea() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log("Tea served");
+      resolve();
+    }, 1000);
+  });
+}
+
+// Using async/await
+async function makeBreakfast() {
+  await boilWater();
+  await makeTea();
+  await serveTea();
+  console.log("Breakfast is ready!");
+}
+
+makeBreakfast();
+
+
+
 
 
