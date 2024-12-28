@@ -105,3 +105,7 @@ evensAndOdds(100);
 // Output:
 // The number of evens are 50.
 // The number of odds are 50.
+
+
+//Hosting in js
+
