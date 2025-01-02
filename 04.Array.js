@@ -76,13 +76,15 @@ array.sort((a, b) => a - b);              // Sorting numbers requires a compare 
 console.log(array);
 
 
-const arr = new Array(1,2,3,4,5);
-console.log(arr);
-console.log(arr[0]);
-console.log(arr[arr.length-1]);
+// const arr = new Array(1,2,3,4,5);
+// console.log(arr);
+// console.log(arr[0]);
+// console.log(arr[arr.length-1]);
 
 const company = ['google', 'facebook', 'amazon', 'flipkart', 'netflix', 'zomato']
 for(let i=0; i<company.length; i++)
 {
     console.log(company[i].toUpperCase());
 }
+
+

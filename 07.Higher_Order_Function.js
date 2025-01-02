@@ -19,40 +19,40 @@ function cube(callback, n)
 
 // Higher order functions return function as a value
 
-const higherOrder = n => {
-    const doSomething = m => {
-      const doWhatEver = t => {
-        return 2 * n + 3 * m + t
-      }
-      return doWhatEver
-    }
-    return doSomething                 //// Higher order function returning an other function
-  }
-  console.log(higherOrder(4)(6)(10))       //n,m,t =4,6,10
+// const higherOrder = n => {
+//     const doSomething = m => {
+//       const doWhatEver = t => {
+//         return 2 * n + 3 * m + t
+//       }
+//       return doWhatEver
+//     }
+//     return doSomething                 //// Higher order function returning an other function
+//   }
+//   console.log(higherOrder(4)(6)(10))       //n,m,t =4,6,10
 
-  function greet(name="Ravi")
-  {
-    console.log("My name is ",name);
+//   function greet(name="Ravi")
+//   {
+//     console.log("My name is ",name);
 
-  }
-  setInterval(greet, 1000);           // it prints hello in every second, 1000ms is 1s
+//   }
+//   setInterval(greet, 1000);           // it prints hello in every second, 1000ms is 1s
 
-  function greet(name="Ravi")
-  {
-    console.log("My name is ",name);
+//   function greet(name="Ravi")
+//   {
+//     console.log("My name is ",name);
 
-  }
-  setTimeout(greet, 1000);        // it prints hello after it waits for 10 seconds.
+//   }
+//   setTimeout(greet, 1000);        // it prints hello after it waits for 10 seconds.
 
 //forEach: Iterate an array elements. We use forEach only with arrays. It takes a callback function with elements, 
 // index parameter and array itself.  The index and the array optional.
 
-let sum=0;
-number = [1,2,3,4,5];
-number.forEach(num=> {                         //// arr.forEach((element, index, arr) => {
-  sum +=num;                                      //   console.log(index, element, arr)
-});                                               
-console.log(sum);     
+// let sum=0;
+// number = [1,2,3,4,5];
+// number.forEach(num=> {                         //// arr.forEach((element, index, arr) => {
+//   sum +=num;                                      //   console.log(index, element, arr)
+// });                                               
+// console.log(sum);     
 
 // Map: Iterate an array elements and modify the array elements.
 // It takes a callback function with elements, index , array parameter and return a new array.
@@ -102,11 +102,11 @@ console.log(rest)
 // //The rest operator is used to collect or gather multiple elements into a single array or object. 
 // //It’s often used in function parameters, destructuring, and object manipulation.
 
-function sum(...numbers) {
-  return numbers.reduce((total, num) => total + num, 0);
-}
+// function sum(...numbers) {
+//   return numbers.reduce((total, num) => total + num, 0);
+// }
 
-console.log(sum(1, 2, 3, 4)); // 10
+// console.log(sum(1, 2, 3, 4)); // 10
 
 let number = [1,2,3,4,5];
 let output = number.map((num) => num*num);
@@ -155,6 +155,30 @@ let resu = user.reduce(function (acc, name){
 
 console.log(resu);
 
+//Polyfill for Map Function :-
 
+Array.prototype.MyMap = function (cb ){
+  let result = [];
+  for(let i=0; i<this.length;i++){
+    result.push(cb(this[i], i, this))
+  }
+  return result;
+};
+
+art = [2,3,4,5,6]
+art.MyMap((num)=>console.log(num));
+
+
+//Polyfills for Filter Function :-
+Array.prototype.MyFilter = function (cb){
+  let result2 = [];
+  for(let i=0; i<this.length; i++){
+    if(cb(this[i], i, this)) result2.push(this[i]);
+  }
+  return result2;
+}
+
+rat = art.MyFilter((num)=>num>2)
+console.log(rat);
 
 
