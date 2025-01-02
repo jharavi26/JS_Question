@@ -181,4 +181,18 @@ Array.prototype.MyFilter = function (cb){
 rat = art.MyFilter((num)=>num>2)
 console.log(rat);
 
+//Polyfills for Reduce 
+Array.prototype.MyReduce = function(cb, initialValue)
+{
+  var accumlator = initialValue;
+  for(i=0; i<this.length;i++){
+    accumlator = accumlator ? cb(accumlator,this[i], i, this): this[i];
+  }
+  return accumlator;
+}
+tra = art.MyReduce((acc, curr, i, arr)=>{
+  return acc+curr;
+},0)
+
+console.log(tra)
 
