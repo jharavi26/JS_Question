@@ -27,3 +27,42 @@ function art()
 art();
 
 console.log(this);
+
+//Call():- Invokes a function immediately with a specific this value and arguments provided one by one.
+// function.call(this.arguments, arg1, arg2, ...)
+
+function greet(greeting, punctuation) {
+  console.log(`${greeting}, ${this.name}${punctuation}`);
+}
+
+const person = { name: "Alice" };
+
+greet.call(person, "Hello", "!"); // Output: Hello, Alice!
+
+//Apply():-Similar to call, but arguments are passed as an array (or array-like object).
+function greet(greeting, punctuation) {
+  console.log(`${greeting}, ${this.name}${punctuation}`);
+}
+
+const person1 = { name: "Alice" };
+
+greet.apply(person1, ["Hi", "?"]); // Output: Hi, Alice?
+
+//Bind():-Returns a new function with a specific this value and optional pre-set arguments. It doesn't invoke the function immediately.
+function greet(greeting, punctuation) {
+  console.log(`${greeting}, ${this.name}${punctuation}`);
+}
+
+const person3 = { name: "Art" };
+
+const greetAlice = greet.bind(person3, "Hey");
+greetAlice("!"); // Output: Hey, Alice!
+
+
+//bind creates a new function and does not invoke it immediately. The new function can be called later.
+
+
+// UseCase :- 
+// call():- Borrowing methods from other objects.
+// apply():- Useful for functions like Math.max where arguments are in an array.
+// bind():-Useful when you need a function to always use the same context.
