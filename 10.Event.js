@@ -1,15 +1,17 @@
 /* Event :- An event is something that occurs when a user interacts with the webpage, such as:
-Clicking a button,Hovering over an element,Pressing a key, Scrolling the page, Submitting a form.
+           Clicking a button,Hovering over an element,Pressing a key, Scrolling the page, Submitting a form.
 
 An event listener :- It is a function that waits for an event to occur on a specific element 
                       and executes a callback function when the event is triggered.
 
 Ways to Add Event Handlers :- 
 1. Inline Event Handler :- <button onclick="alert('Button clicked!')">Click Me</button>
+
 2. using DOM Element Properties :- const button = document.getElementById('myButton');
                                     button.onclick = function() {
                                         alert('Button clicked!');
                                     };
+
 3. using AddEventHandler Method :-element.addEventListener(eventType, eventHandler, options);
 
 button.addEventListener('click', function() {
@@ -44,7 +46,7 @@ function isPrime(num) {
 // Function to generate and classify numbers
 function generateNumbers(n) {
   const container = document.getElementById('numberContainer');
-  container.innerHTML = ''; // Clear previous numbers
+  container.innerHTML = '';                                        // Clear previous numbers
 
   for (let i = 1; i <= n; i++) {
       const div = document.createElement('div');

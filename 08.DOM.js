@@ -22,6 +22,7 @@ titles[3].setAttribute('class', 'title')
 titles[3].setAttribute('id', 'fourth-title')
 
 The textContent property is used to add text to an HTML element.
+
 const titles = document.querySelectorAll('h1')
 titles.textContent = 'Fourth Title'
 
