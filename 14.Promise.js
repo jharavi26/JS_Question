@@ -36,29 +36,6 @@ const myPromise = new Promise((resolve, reject) => {
     console.log(error); // Runs if the promise is rejected
   });
 
-  
-const doSomething = callback => {
-    setTimeout(() => {
-      const skills = ['HTML', 'CSS', 'JS']
-      callback('It did not go well', skills)
-    }, 2000)
-  }
-  const doSomethings = callback => {
-    setTimeout(() => {
-      const skills = ['HTML', 'CSS', 'JS']
-      callback(false, skills)
-    }, 2000)
-  }
-  const callback = (err, result) => {
-    if (err) {
-      return console.log(err)
-    }
-    return console.log(result)
-  }
-  
-  doSomething(callback);
-  doSomethings(callback);
-
 const pizzaOrder = new Promise((resolve, reject) => {
     const pizzaArrived = true; // Simulating success
   
@@ -80,4 +57,32 @@ const pizzaOrder = new Promise((resolve, reject) => {
       console.log(error); // If rejected, this runs
     });
   
+
+    let promise = new Promise(function(resolve, reject) {
+      resolve(5);
+    });
+    
+    promise
+      .then((result)=>{
+        console.log(result); // Output: 5
+        return result * 2;
+      })
+      .then((result )=>{
+        console.log(result); // Output: 10
+        return result + 5;
+      })
+      .then((result)=>{
+        console.log(result); // Output: 15
+      });
+    
+const art1 = new Promise((resolve, reject)=> setTimeout(resolve, 1000, "First"))
+const art2 = new Promise((resolve, reject)=> setTimeout(reject, 1000, "Second"))
+const art3 = new Promise((resolve, reject)=> setTimeout(resolve, 2000, "Third"))
+
+Promise.allSettled([art1, art2, art3])
+.then((result)=>console.log(result))
+.catch((error)=>console.log(error))
+.finally(function() {
+  console.log("The promise is complete!");
+});
 
