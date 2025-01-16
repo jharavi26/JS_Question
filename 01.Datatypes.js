@@ -1,4 +1,12 @@
-//Date & Time Object & Their Method 
+//Date & Time Object & Their Method
+
+// typeof "John Doe" // Returns "string"
+// typeof 3.14 // Returns "number"
+// typeof true // Returns "boolean"
+// typeof 234567890123456789012345678901234567890n // Returns bigint
+// typeof undefined // Returns "undefined"
+// typeof null // Returns "object" (kind of a bug in JavaScript)
+// typeof Symbol('symbol') // Returns Symbol
 
 const now = new Date()
 console.log(now)                   // 2024-11-14T10:00:59.906Z

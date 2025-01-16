@@ -1,16 +1,19 @@
-function Largest(arr){
-  if(arr.length<=1){
-    return arr;
-  }
-  let largest =  Number.MIN_SAFE_INTEGER;
-  for(let i=0; i<arr.length; i++){
-    if(largest<arr[i]){
-      largest = arr[i]
+let arr = [2,4,6,8,10];
+
+
+let art = arr.map((x)=>x*4).filter((x)=>x>16)
+console.log(art);
+
+let rav = art.reduce((acc, curr)=>acc+curr+100)
+console.log(rav);
+
+
+function add(n){
+  return function sub(m){
+    return function mal(o){
+      return n+m+o
     }
   }
-  return largest;
-
 }
+c
 
-const arr = [1,3,49,2,8];
-console.log(Largest(arr));
