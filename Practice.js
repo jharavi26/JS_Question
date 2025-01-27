@@ -1,10 +1,11 @@
-
- function getData(){
-  fetch("https://dummyjson.com/products")
-  .then(res => res.json())
-  .then(result => {
-    document.getElementById("output1").innerHTML = result.products
-    .map(product => `<li>${product.id}: ${product.title}</li>`)
-    .join(""); 
+function getData(){
+  fetch("https://picsum.photos/v2/list")
+  .then((res)=>res.json())
+  .then((res)=>{
+    const data = res.map((item)=>(
+    `<span><img src = ${item.download_url} width="200px">
+  </span>`
+  ))
+document.getElementById("output1").innerHTML = data  
 })
 }
