@@ -10,43 +10,27 @@
 // It pauses the execution of the async function until the promise resolves or rejects.
 
 
-const URL = "https://cat-fact.herokuapp.com/facts";
-
-const getFacts = async()=>{
-  console.log("Getting Data....");
-  let Response= await fetch(URL);
-  console.log(Response);                   //JSON Format
-  let data = await Response.json();
-  console.log(data);
-};
-
-function GenerateJoke(){
-const data = fetch("https://official-joke-api.appspot.com/random_joke")   // Fetch a random joke from the Joke API
-data.then((response)=>{
-  return response.json();                 // Parses the JSON response
-}).then((result)=>{
-  var element = document.getElementById("main")
-  element.innerHTML = `<h3>Setup :   ${result.setup} </h3> 
-   <h2>Punchline: ${result.punchline} </h2>`
+function getData(){
+  fetch("https://picsum.photos/v2/list")
+  .then((res)=>res.json())
+  .then((res)=>{
+    const data = res.map((item)=>(
+    `<span><img src = ${item.download_url} width="200px">
+  </span>`
+  ))
+document.getElementById("output1").innerHTML = data  
 })
 }
 
-async function greet(){
-  try{
 
-    const art = await fetch("https://official-joke-api.appspot.com/random_joke")
-    console.log(art);
-    const rav = await art.json();
-    console.log(rav)
-    console.log("Setup:", rav.setup);
-    console.log("Punchline:", rav.punchline);
-
-    const element = document.getElementById("side");
-    element.innerHTML = `
-      <h3>Setup: ${rav.setup}</h3> 
-      <h2>Punchline: ${rav.punchline}</h2>`;
-  } catch (error) {
-    console.error("Error fetching joke:", error);
-  }
+function getData1(){
+  fetch("https://picsum.photos/v2/list")
+  .then((res)=>res.json())
+  .then((res)=>{
+    if(res.length>0){
+    const data = `<span><img src = ${res[0].download_url} width="200px"></span>`
+    document.getElementById("output1").innerHTML = data 
+}})
+ 
 }
-greet();
+
